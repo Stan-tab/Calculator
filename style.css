@@ -1,0 +1,82 @@
+body {
+    height: 100vh;
+    display: flex;
+    background-color: cadetblue;
+}
+
+body button {
+    border-radius: 5px;
+    border: rgba(156, 199, 201, 0.788) dotted 1px
+}
+
+.calc {
+    margin: auto;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 20%;
+    flex: 0 0 300px;
+    border: solid 2px;
+}
+
+.output {
+    flex: 1;
+    background-color: rgba(156, 159, 201, 0.788);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.out {
+    padding: 0;
+    font-size: 35px;
+    margin: 0 15px 0 0;
+}
+
+.nums_signs {
+    flex: 4;
+    background-color: wheat;
+    display: flex;
+}
+
+.logic {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.cldel {
+    display: flex;
+    flex: 1;
+}
+
+.cldel > * {
+    flex: 1;
+}
+
+.nums {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 4;
+    flex-direction: column;
+}
+
+.nums > * {
+    display: flex;
+    flex: 1;
+}
+
+.nums > * > * {
+    flex: 1;
+}
+
+.signs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.signs > * {
+    flex: 1;
+}
