@@ -24,11 +24,19 @@ body button {
     flex: 1;
     background-color: rgba(156, 159, 201, 0.788);
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 }
 
-.out {
+.outprev {
+    padding: 0;
+    font-size: 20px;
+    margin: 0 15px 0 0;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.out{
     padding: 0;
     font-size: 35px;
     margin: 0 15px 0 0;
