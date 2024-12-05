@@ -1,4 +1,4 @@
-const numbers = [...document.querySelectorAll(".nums button")];
+const numbers = [...document.querySelectorAll(".nums button")].splice(0, 9).concat([...document.querySelectorAll(".nums button")].splice(10, 10));
 const prevPara = document.querySelector(".outprev");
 const para = document.querySelector(".out");
 const clear = document.querySelector('.clear');
@@ -8,8 +8,9 @@ const signValue = signs.map((item) => item.value);
 const equal = document.querySelector(".equal");
 const opositeSign = document.querySelector(".oposite");
 let called = false;
-let check;
 let nums = [];
+
+console.log(numbers)
 
 numbers.forEach(item => {
     item.addEventListener("click", () => {
@@ -44,11 +45,8 @@ del.addEventListener('click', () => {
 })
 
 opositeSign.addEventListener("click", () => {
-    if (para.textContent != '') {
-        para.textContent = -para.textContent;
-    } else {
-        para.textContent = check;
-    }
+    if (para.textContent == '') return;
+    para.textContent = -para.textContent; 
 })
 
 equal.addEventListener("click", () => {
@@ -56,7 +54,6 @@ equal.addEventListener("click", () => {
     nums.push(para.textContent);
     count("");
     para.textContent = nums[0];
-    check = nums[0];
     prevPara.textContent = "";
     nums = [];
 })
